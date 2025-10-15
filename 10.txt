@@ -1,0 +1,22 @@
+# quiz_game.py
+# -----------------------
+# クイズ形式で遊べる簡単なゲーム
+# -----------------------
+
+questions = {
+    "Pythonの拡張子は？": "py",
+    "日本の首都は？": "東京",
+    "1+1は？": "2"
+}
+
+score = 0
+
+for q, a in questions.items():
+    ans = input(q + " => ")
+    if ans.strip() == a:
+        print("正解！\n")
+        score += 1
+    else:
+        print(f"不正解！ 正解は「{a}」です。\n")
+
+print(f"スコア: {score}/{len(questions)}")
